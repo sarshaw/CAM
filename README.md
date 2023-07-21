@@ -31,8 +31,6 @@ This topic of research in the field of data analytics remains relatively unexplo
 
 Our secondary goal involved categorizing tweets into three groups: those from believers in CAM practices, skeptics of CAM information, and individuals expressing a neutral stance. This analysis aimed to provide insights into the overall perception of CAM and how online information about it is perceived. The results would be valuable for further research on popular CAM fields, while also helping to debunk false information and dispel rumors that could jeopardize someone's health.
 
-***Data***
-
 We solely relied on Twitter as our main data source, utilizing a Python script to gather publicly available tweets accessible through Twitter's Application Programming Interface (API). Our objective was to encompass discussions about various complementary and alternative medicines (CAM). To achieve this, we employed multiple hashtags and keywords associated with each CAM approach. These hashtags and keywords were determined based on insights from the National Center for Complementary and Integrated Health, trending CAM topics on Twitter, and relevant literature, including the work of Marcon, Klostermann, & Caulfield (2016). These resources guided us in formulating query terms to effectively search and extract CAM-related tweets. Among the hashtags we employed were the following popular and commonly used CAM-related ones:
 
 - AlternativeMedicine
@@ -70,7 +68,7 @@ We conducted multiple searches and collected tweets using various hashtags, whic
 
 **Repository Structure**
 
-***R***
+**R**
 
 Multiple R notebooks for initial data cleaning and pre-processing.
 
@@ -80,7 +78,7 @@ Subsequently, in the next step (more pre-processing codes can be found in indivi
 
 After undergoing these significant cleaning steps, the final dataset comprised 69,500 unique English tweets posted by users from the US and Canada. This clean dataset was then saved into a CSV file named "clean_unique_tweet.csv."
 
-***input_data***
+**input_data**
 
 The full datasets were not shared due to ethical and IRB considerations.
 
@@ -125,7 +123,7 @@ To gain insights into the most common discussion topics related to CAM, we gener
 
 For our classification task, we worked with labeled data, splitting it into a 70% training set and a 30% testing set. We employed four common classifiers used in text analysis: Naïve Bayes, Logistic Regression, SVM, and Random Forest. After training the models using the training data, we evaluated their performance on the test data. We used the count vector, word-level TF-IDF scores, character-level TF-IDF scores, and N-Gram representations of tweets as inputs, and the tweet labels as the predictive variable. Consequently, we built a total of 16 classification models.
 
-**LDA_visualization.ipynb**
+***LDA_visualization.ipynb***
 
 We utilized gensim, spacy, nltk, keras, and matplotlib to construct a topic model for the dataset using the Latent Dirichlet Allocation (LDA) algorithm. The objective was to identify commonly discussed CAM topics on Twitter. Initially, we lemmatized each word, reducing it to its root form, while retaining only nouns, adjectives, verbs, and adverbs. Subsequently, we built the LDA model.
 
@@ -133,7 +131,7 @@ To create the LDA topic model, we established both the text corpus and the dicti
 
 The application of LDA allowed us to compile a list of the ten most dominant topics along with their corresponding keywords and weights for each tweet. Examining the topic keywords, we observed a clear thematic separation and collective representation of CAM topics defined by the NCCIH, including yoga, ayurveda, and natural herbs.
 
-**Sentiment_nalysis.pynb**
+***Sentiment_nalysis.pynb***
 
 We employed Python's _NLTK_ library to perform sentiment analysis on tweets using the _VADER lexicon_. The aim was to analyze the sentiments of these tweets, which were part of an unlabeled dataset. Leveraging NLTK's Sentiment Intensity Analyzer algorithm, we automatically categorized each tweet as either positive (\>0), negative (\<0), or unknown (0).
 
@@ -144,13 +142,16 @@ The sentiment analysis provided valuable insights into people's opinions on CAM 
 **output_data**
 
 ***Text_Classification.html***
-**LDA_visualization.html**
-**Sentiment_nalysis.html**
+
+***LDA_visualization.html***
+
+***Sentiment_nalysis.html***
 
 Contains the outputs of the data analysis. The data analysis outputs in notebooks sometimes fail to load interactive plots. Viewing the results by downloading and running the .html files would be easier.
 
 
 **data**
+
 Should contain the pre-trained word vector model used in sentiment analysis.
 
 Download and unzip pre-trained word vectors --
