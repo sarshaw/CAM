@@ -35,7 +35,6 @@ Our secondary goal involved categorizing tweets into three groups: those from be
 
 We solely relied on Twitter as our main data source, utilizing a Python script to gather publicly available tweets accessible through Twitter's Application Programming Interface (API). Our objective was to encompass discussions about various complementary and alternative medicines (CAM). To achieve this, we employed multiple hashtags and keywords associated with each CAM approach. These hashtags and keywords were determined based on insights from the National Center for Complementary and Integrated Health, trending CAM topics on Twitter, and relevant literature, including the work of Marcon, Klostermann, & Caulfield (2016). These resources guided us in formulating query terms to effectively search and extract CAM-related tweets. Among the hashtags we employed were the following popular and commonly used CAM-related ones:
 
-|
 - AlternativeMedicine
 - HolisticMedicine
 - MedicinalPlants
@@ -43,7 +42,6 @@ We solely relied on Twitter as our main data source, utilizing a Python script t
 - alternativemedicine
 - acupuncture
 - naturalhealing
- |
 - naruralremedies
 - medicalcannabis
 - plantmedicine
@@ -52,7 +50,6 @@ We solely relied on Twitter as our main data source, utilizing a Python script t
 - osteopathy
 - taichi
 - natural+cure
- |
 - CBDOils
 - Ayurveda
 - holistichealing
@@ -61,7 +58,6 @@ We solely relied on Twitter as our main data source, utilizing a Python script t
 - traditionalmedicine
 - remedies
 - holistic+cure
- |
 - complementary+medicine
 - alternative+medicine
 - naturopathy
@@ -69,8 +65,6 @@ We solely relied on Twitter as our main data source, utilizing a Python script t
 - natural+treatments
 - traditional+chinese+medicine
 - herbal+medicines
- |
-| --- | --- | --- | --- |
 
 We conducted multiple searches and collected tweets using various hashtags, which were later consolidated into a comprehensive CSV file. Initially, a total of 110,860 tweets were gathered. The dataset comprised several tweet attributes: _created_ (time of the posting), _tweet\_id_ (unique identifier for each tweet), _text_ (tweet content), _retwc_ (number of retweet), _hashtag_ (hashtags contained by tweet), _source_ (source device), _username_ (who posted the tweet), _usersince_ (long the users are using Twitter), _authorid_ (unique id for each user), _followers_ (number of followers), _friends_ (friends of users), _authorloc_ (location of the tweet author), and _geoenable_ (whether the tweet was geo enabled or not).
 
@@ -129,7 +123,7 @@ To calculate the term frequency (TF) and inverse document frequency (IDF) of the
 
 To gain insights into the most common discussion topics related to CAM, we generated word cloud representations of the clean tweets. The word clouds highlighted frequent words such as "homeopathy," "natural," "acupuncture," "oil," and others that were commonly mentioned in the tweets.
 
-For our classification task, we worked with labeled data, splitting it into a 70% training set and a 30% testing set. We employed four common classifiers used in text analysis: Naïve Bayes, Logistic Regression, SVM, and Random Forest. After training the models using the training data, we evaluated their performance on the test data. We used the count vector, word-level TF-IDF scores, character-level TF-IDF scores, and N-Gram representations of tweets as inputs, and the tweet labels as the predictive variable. Consequently, we built a total of 16 classification models.
+For our classification task, we worked with labeled data, splitting it into a 70% training set and a 30% testing set. We employed four common classifiers used in text analysis: NaÃ¯ve Bayes, Logistic Regression, SVM, and Random Forest. After training the models using the training data, we evaluated their performance on the test data. We used the count vector, word-level TF-IDF scores, character-level TF-IDF scores, and N-Gram representations of tweets as inputs, and the tweet labels as the predictive variable. Consequently, we built a total of 16 classification models.
 
 **LDA_visualization.ipynb**
 
